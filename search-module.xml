@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="search-module" parallel="tests" thread-count="3">
+    <test name="search-test-1">
+        <parameter name="keyword" value="JAVA"></parameter>
+        <classes>
+            <class name="com.searchmodule.tests.SearchTest"></class>
+        </classes>
+    </test>
+    <test name="search-test-2">
+        <parameter name="keyword" value="TESTING"></parameter>
+        <classes>
+            <class name="com.searchmodule.tests.SearchTest"></class>
+        </classes>
+    </test>
+    <test name="search-test-3">
+        <parameter name="keyword" value="Docker"></parameter>
+        <classes>
+            <class name="com.searchmodule.tests.SearchTest"></class>
+        </classes>
+    </test>
+    <test name="search-test-4">
+        <parameter name="keyword" value="Kubernetes"></parameter>
+        <classes>
+            <class name="com.searchmodule.tests.SearchTest"></class>
+        </classes>
+    </test>
+    <test name="search-test-5">
+        <parameter name="keyword" value="AWS"></parameter>
+        <classes>
+            <class name="com.searchmodule.tests.SearchTest"></class>
+        </classes>
+    </test>
+</suite>

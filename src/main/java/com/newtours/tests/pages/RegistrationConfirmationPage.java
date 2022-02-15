@@ -1,0 +1,38 @@
+package com.newtours.tests.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+public class RegistrationConfirmationPage {
+
+    private WebDriver driver;
+    private WebDriverWait wait;
+
+    @FindBy(partialLinkText = "sign-in")
+    private WebElement signLink;
+
+    @FindBy(partialLinkText = "Flights")
+    private WebElement flightsLink;
+
+    public RegistrationConfirmationPage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, 30);
+        PageFactory.initElements(driver,this);
+    }
+
+    public boolean isLoaded(){
+       return this.signLink.isDisplayed();
+    }
+
+    public void goToFlightDetailsPage(){
+        this.wait.until(ExpectedConditions.visibilityOf(signLink));
+        this.flightsLink.click();
+    }
+
+}

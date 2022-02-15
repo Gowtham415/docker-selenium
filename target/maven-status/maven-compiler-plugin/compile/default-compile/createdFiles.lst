@@ -1,0 +1,6 @@
+com/newtours/tests/pages/RegistrationPage.class
+com/newtours/tests/pages/RegistrationConfirmationPage.class
+com/searchmodule/pages/SearchPage.class
+com/newtours/tests/pages/FlightDetailsPage.class
+com/newtours/tests/pages/FindFlightPage.class
+com/newtours/tests/pages/FlightConfirmationPage.class

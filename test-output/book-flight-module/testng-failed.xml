@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [book-flight-module]" parallel="tests">
+  <test thread-count="3" name="book-flight-test-4(failed)" parallel="tests">
+    <parameter name="expectedPrice" value="$2338 USD"/>
+    <parameter name="noOfPassengers" value="4"/>
+    <classes>
+      <class name="com.newtours.tests.BookFlightTest">
+        <methods>
+          <include name="registrationPageTest"/>
+          <include name="tearDown"/>
+          <include name="flightConfirmationPage"/>
+          <include name="setUp"/>
+          <include name="registrationConfirmationTest"/>
+          <include name="flightDetailsPage"/>
+          <include name="findFlightPage"/>
+          <include name="setParameters"/>
+        </methods>
+      </class> <!-- com.newtours.tests.BookFlightTest -->
+    </classes>
+  </test> <!-- book-flight-test-4(failed) -->
+</suite> <!-- Failed suite [book-flight-module] -->

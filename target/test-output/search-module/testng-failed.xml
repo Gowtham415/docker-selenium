@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [search-module]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="search-test-5(failed)">
+    <parameter name="keyword" value="AWS"/>
+    <classes>
+      <class name="com.searchmodule.tests.SearchTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="searchPage"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.searchmodule.tests.SearchTest -->
+    </classes>
+  </test> <!-- search-test-5(failed) -->
+</suite> <!-- Failed suite [search-module] -->
