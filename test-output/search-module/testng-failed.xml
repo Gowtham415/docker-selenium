@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [search-module]" parallel="tests">
-  <test thread-count="3" name="search-test-3(failed)" parallel="tests">
-    <parameter name="keyword" value="Docker"/>
-    <classes>
-      <class name="com.searchmodule.tests.SearchTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="searchPage"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.searchmodule.tests.SearchTest -->
-    </classes>
-  </test> <!-- search-test-3(failed) -->
   <test thread-count="3" name="search-test-1(failed)" parallel="tests">
     <parameter name="keyword" value="JAVA"/>
     <classes>
@@ -25,6 +13,18 @@
       </class> <!-- com.searchmodule.tests.SearchTest -->
     </classes>
   </test> <!-- search-test-1(failed) -->
+  <test thread-count="3" name="search-test-3(failed)" parallel="tests">
+    <parameter name="keyword" value="Docker"/>
+    <classes>
+      <class name="com.searchmodule.tests.SearchTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="searchPage"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.searchmodule.tests.SearchTest -->
+    </classes>
+  </test> <!-- search-test-3(failed) -->
   <test thread-count="3" name="search-test-2(failed)" parallel="tests">
     <parameter name="keyword" value="TESTING"/>
     <classes>

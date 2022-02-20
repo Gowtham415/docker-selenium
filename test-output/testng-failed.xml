@@ -1,22 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [book-flight-module]" parallel="tests">
-  <test thread-count="3" name="book-flight-test-4(failed)" parallel="tests">
-    <parameter name="expectedPrice" value="$2338 USD"/>
-    <parameter name="noOfPassengers" value="4"/>
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [search-module]" parallel="tests">
+  <test thread-count="3" name="search-test-1(failed)" parallel="tests">
+    <parameter name="keyword" value="JAVA"/>
     <classes>
-      <class name="com.newtours.tests.BookFlightTest">
+      <class name="com.searchmodule.tests.SearchTest">
         <methods>
-          <include name="registrationPageTest"/>
           <include name="tearDown"/>
-          <include name="flightConfirmationPage"/>
+          <include name="searchPage"/>
           <include name="setUp"/>
-          <include name="registrationConfirmationTest"/>
-          <include name="flightDetailsPage"/>
-          <include name="findFlightPage"/>
-          <include name="setParameters"/>
         </methods>
-      </class> <!-- com.newtours.tests.BookFlightTest -->
+      </class> <!-- com.searchmodule.tests.SearchTest -->
     </classes>
-  </test> <!-- book-flight-test-4(failed) -->
-</suite> <!-- Failed suite [book-flight-module] -->
+  </test> <!-- search-test-1(failed) -->
+  <test thread-count="3" name="search-test-3(failed)" parallel="tests">
+    <parameter name="keyword" value="Docker"/>
+    <classes>
+      <class name="com.searchmodule.tests.SearchTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="searchPage"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.searchmodule.tests.SearchTest -->
+    </classes>
+  </test> <!-- search-test-3(failed) -->
+  <test thread-count="3" name="search-test-2(failed)" parallel="tests">
+    <parameter name="keyword" value="TESTING"/>
+    <classes>
+      <class name="com.searchmodule.tests.SearchTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="searchPage"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.searchmodule.tests.SearchTest -->
+    </classes>
+  </test> <!-- search-test-2(failed) -->
+  <test thread-count="3" name="search-test-5(failed)" parallel="tests">
+    <parameter name="keyword" value="AWS"/>
+    <classes>
+      <class name="com.searchmodule.tests.SearchTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="searchPage"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.searchmodule.tests.SearchTest -->
+    </classes>
+  </test> <!-- search-test-5(failed) -->
+  <test thread-count="3" name="search-test-4(failed)" parallel="tests">
+    <parameter name="keyword" value="Kubernetes"/>
+    <classes>
+      <class name="com.searchmodule.tests.SearchTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="searchPage"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.searchmodule.tests.SearchTest -->
+    </classes>
+  </test> <!-- search-test-4(failed) -->
+</suite> <!-- Failed suite [search-module] -->

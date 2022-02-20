@@ -3,6 +3,8 @@ FROM openjdk:8u191-jre-alpine3.8
 # WORKSPACE
 WORKDIR /usr/share/udemy
 
+RUN apk add curl jq
+
 # Add .jar under target to this host
 # into this image
 ADD target/selenium-docker.jar selenium-docker.jar
@@ -16,11 +18,10 @@ ADD target/libs libs
 ADD book-flight-module.xml book-flight-module.xml
 ADD search-module.xml search-module.xml
 
-#BROWSER
-#HUB_HOST
-#SUITE_MODULE
-# All of these are parameterized and sent in the docker run command
-ENTRYPOINT java -cp selenium-docker.jar:selenium-docker-tests.jar:libs/\* -DBROWSER=$BROWSER -DHUB_HOST=$HUB_HOST org.testng.TestNG $SUITE_MODULE
+# Add Healthcheck script
+ADD healthcheck.sh healthcheck.sh
+
+ENTRYPOINT sh healthcheck.sh
 
 
 

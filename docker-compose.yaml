@@ -13,7 +13,19 @@ services:
       - HUB_HOST=hub
   firefox:
     image: selenium/node-firefox:3.141.59
+    shm_size: '1gb'
     depends_on:
       - hub
     environment:
       - HUB_HOST=hub
+  search-module:
+    image: gowtham415/selenium-docker
+    depends_on:
+      - chrome
+      - firefox
+    environment:
+      - HUB_HOST=hub
+      - MODULE=search-module.xml
+      - BROWSER=firefox
+    volumes:
+    - ./search-result:/usr/share/udemy/test-output
